@@ -1,7 +1,7 @@
 ---
 # refresh website from git to webservers
 - name: Update website
-  hosts: role_webserver
+  hosts: rhel
   become: yes
 
   tasks:
