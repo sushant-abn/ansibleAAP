@@ -36,10 +36,12 @@ Apart from the already available machine credential, you need a few more..
 - A Credential to be able to communicate with Hashicorp Terraform Cloud. Use Credential Type "Hashicorp Terraform Cloud" and the provided token.
 - A Credential to be able to sync the Terraform State File that will be used for the inventory source. Choose the credential type "Terraform backend configuration". In the backend configuration field enter the following:
 
-> hostname = "app.terraform.io"  
-> organization = "TechXchangeNL"  
-> token = "YOURTOKENHERE"  
-> workspaces { name = "YOURWORKSPACE" }  
+```text
+hostname = "app.terraform.io"  
+organization = "TechXchangeNL"  
+token = "YOURTOKENHERE"  
+workspaces { name = "YOURWORKSPACE" }  
+```
 
 For token, enter the token provided
 For workspace anter the workspace you made in Terraform (you did...right?)
