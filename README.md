@@ -1,9 +1,9 @@
 # Welcome to the Ansible part of the workshop
 
 ## The basics
-- Where is the Ansible Automation Server: [here](https://caap.fvz.ansible-labs.de)
-- What is my username: the part before the @ of the email address you gave us
-- What is my password: it's on the whiteboard in the workshop room
+- Where is the Ansible Automation Server? -> [here](https://caap.fvz.ansible-labs.de)
+- What is my username? -> The part before the @ of the email address you gave us
+- What is my password? -> It's on the whiteboard in the workshop room
 
 Ansible Automation Platform (AAP) has the notion of "Organisations". For this workshop an Organisation named TechXchangeNL has been made and your account is part of that. Everything you do you will do within that organisation.
 
