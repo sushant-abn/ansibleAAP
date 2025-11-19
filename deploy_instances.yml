@@ -8,6 +8,6 @@
       run_message: "Review infrastructure changes"
       # plan_only: true
       auto_apply: true
-      tf_timeout: 180
+      # tf_timeout: 180
       poll: true
       state: "present"
