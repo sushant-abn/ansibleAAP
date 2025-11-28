@@ -94,7 +94,8 @@ Now that you have the basics set up (project, credentials, inventory), you can d
 
 Have a look at the playbooks in this repo to get a sense of what they do. You might notice that the playbooks `deploy_webserver` and `deploy_website` are already made for you, but `apply_plan` is not. You need to develop this playbook yourself (because you are here to learn about the integration by doing, remember ;-) ). Use the embedded editor in github. The documentation that you need can be found under `Automation Content > Collections > hashicorp.terraform`. You need the `run` module. As the name of the playbook suggests you need to apply the plan.
 
-  Tip: If you have timing issues we found that you need to enable polling with an interval of 5 and a timeout of 1200. Also make tf_timeout something like 6000.
+> [!TIP]
+> If you have timing issues we found that you need to enable polling with an interval of 5 and a timeout of 1200. Also make tf_timeout something like 6000.
 
 Create a Job Template for each of these playbooks.
 For the deploy_servers playbook:
