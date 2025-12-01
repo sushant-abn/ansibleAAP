@@ -55,7 +55,7 @@ Apart from the already available machine credential, you need a few more..
   For workspace enter the workspace you made in Terraform (you did...right?)
 
 ### Inventories
-Create an inventory called "TechXchangeNL" and add a dynamic inventory source to it named "Terraform". This source is of type `Terraform State` and needs some configuration to do the magic of syncing the statefile. Use the provided execution environment `ee-tech-x-change-nl` and the config that you need to give in the `Source Variables` are:
+Create an inventory called "TechXchangeNL" and add a dynamic inventory source to it named "Terraform". This source is of type `Terraform State` and needs some configuration to do the magic of syncing the statefile. Use the provided execution environment `ee-tech-x-change-nl` and the credential you made for it. The config that you need to give in the `Source Variables` is:
 ```text
 plugin: cloud.terraform.terraform_state
 backend_type: remote
