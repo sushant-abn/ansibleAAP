@@ -88,7 +88,6 @@ Have a look at the playbooks in this repo to get a sense of what they do. You mi
 #### apply_plan
 The documentation that you need can be found under `Automation Content > Collections > hashicorp.terraform` for `apply_plan`. You need the `run` module. As the name of the playbook suggests you need to apply the plan. 
 
-> [!TIP]
 > If you have timing issues we found that you need to enable polling with an interval of 5 and a timeout of 1200. Also make tf_timeout something like 6000.
 
 #### deploy_website
