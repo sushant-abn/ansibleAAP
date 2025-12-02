@@ -107,6 +107,13 @@ The following building blocks are needed for the new _Terraform Actions_ feature
 
 > Wherever you can and/or need to specify an Organization, choose `TechXchangeNL`, unless stated otherwise.
 
+### rulebook
+Event Drive Ansible works with rulebooks. You find a template rulebook in this repo under the directory `rulebooks` named `terrafrom_actions.yml`. It is not finished and you need to define the rule that comes from the `HCP Terraform Action`. The documentation for making rules you find [here](https://docs.ansible.com/projects/rulebook). You need to craft a rule that:
+- Checks for the condition `event.payload.template_type == "workflow_job"`
+- If the condition is met, perform an action to run a workflow_job with the following parameters:
+  - name: "{{ event.payload.workflow_job_template_name }}"
+  - organization: "{{ event.payload.organization_name }}"
+
 ### Project
 Make a project with the same URL as the project you made for the Controller. (We have choosen to put the playbooks for controller and rulebooks for EDA in the same repo for this workshop. As you can see rulebooks are stored in a seperate folder. However, You do need to define a seperate project for EDA).
 
