@@ -1,7 +1,15 @@
 - name: HCP
   hosts: all
   tasks:
-  - name: Apply a terraform plan
+  # - name: Apply a terraform plan
+  - name: Create a plan-only run for review (with polling)
+    hashicorp.terraform.run:
+      workspace_id: "ws-oaSWws7Es1fSCgqo"
+      run_message: "Review infrastructure changes"
+      plan_only: true
+      poll: true
+      state: "present"
+      
   - name: Create a new Terraform run with auto-apply
     hashicorp.terraform.run:
       workspace: "terraform-abn"
@@ -14,3 +22,4 @@
         - key: "app_version"
           value: "v1.2.3"
       state: "present"
+  
