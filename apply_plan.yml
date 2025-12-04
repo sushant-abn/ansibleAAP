@@ -14,7 +14,7 @@
     hashicorp.terraform.run:
       workspace: "terraform-abn"
       organization: "TechXchangeNL"
-      run_message: "Deploy new application version"
+      run_message: "Deploy new infra"
       auto_apply: true
       variables:
         - key: "environment"
