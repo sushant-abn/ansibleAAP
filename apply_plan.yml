@@ -4,7 +4,7 @@
   - name: Apply a terraform plan
     hashicorp.terraform.run:
       organization: "TechXchangeNL"
-      workspace: "{{ workspace }}"
+      workspace: "terraform-abn"
       run_message: "Apply infrastructure changes"
       auto_apply: true
       tf_timeout: 6000
