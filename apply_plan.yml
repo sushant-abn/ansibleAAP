@@ -4,8 +4,8 @@
   - name: Apply a terraform plan
   - name: Create a new Terraform run with auto-apply
     hashicorp.terraform.run:
-      workspace: "my-app-workspace"
-      organization: "my-org"
+      workspace: "terraform-abn"
+      organization: "TechXchangeNL"
       run_message: "Deploy new application version"
       auto_apply: true
       variables:
