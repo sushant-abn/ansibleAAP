@@ -1,25 +1,19 @@
 - name: HCP
   hosts: all
   tasks:
-  # - name: Apply a terraform plan
-  # - name: Create a plan-only run for review (with polling)
-  #   hashicorp.terraform.run:
-  #     workspace_id: "ws-oaSWws7Es1fSCgqo"
-  #     run_message: "Review infrastructure changes"
-  #     plan_only: true
-  #     poll: true
-  #     state: "present"
-      
-  - name: Create a new Terraform run with auto-apply
+  - name: Apply a terraform plan
     hashicorp.terraform.run:
-      workspace: "terraform-abn"
       organization: "TechXchangeNL"
-      run_message: "Deploy new infra"
+      workspace: "{{ workspace }}"
+      run_message: "Apply infrastructure changes"
       auto_apply: true
-      variables:
-        - key: "environment"
-          value: "production"
-        - key: "app_version"
-          value: "v1.2.3"
+      tf_timeout: 6000
+      poll: true
+      poll_interval: 5
+      poll_timeout: 1200
       state: "present"
-  
+    register: result
+
+  - name: show result
+    ansible.builtin.debug:
+      msg: "{{ result }}"
